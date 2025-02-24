@@ -1,4 +1,5 @@
 /// <reference types="vitest" />
+import path from "path"
 import react from '@vitejs/plugin-react';
 import dotenv from 'dotenv';
 import { defineConfig } from 'vite';
@@ -38,5 +39,10 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: 'setupTests.ts',
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   },
 });

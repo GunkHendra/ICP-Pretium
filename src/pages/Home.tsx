@@ -1,5 +1,6 @@
 import { useQueryCall, useUpdateCall } from '@ic-reactor/react';
 import { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 
 function App() {
   const [greeting, setGreeting] = useState('');
@@ -25,6 +26,11 @@ function App() {
 
   return (
     <div>
+      <Card>
+        <CardContent>
+          Ini kartu
+        </CardContent>
+      </Card>
       <h1>Vite + React + Motoko</h1>
       <div>
         <button onClick={increment} disabled={loading} className='cursor-pointer border border-gray-700'>
