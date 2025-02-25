@@ -1,6 +1,8 @@
 import { useQueryCall, useUpdateCall } from '@ic-reactor/react';
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [greeting, setGreeting] = useState('');
@@ -25,7 +27,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='px-4'>
       <Card>
         <CardContent>
           Ini kartu
@@ -38,12 +40,18 @@ function App() {
         </button>
         <span>count is {count?.toString() ?? 'loading...'}</span>
         <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Enter your Name:</label>
-            <input id="name" type="text" className='border border-gray-700 rounded-md' />
+          <label htmlFor="name">Enter your Name:</label>
+          <input id="name" type="text" className='border border-gray-700 rounded-md' />
           <button type="submit" className='border border-gray-700 rounded-md cursor-pointer'>Submit</button>
         </form>
         {greeting && <p>{greeting}</p>}
       </div>
+
+      <Link to='/login'>
+        <Button className='cursor-pointer'>
+          Sign In
+        </Button>
+      </Link>
     </div>
   );
 }
