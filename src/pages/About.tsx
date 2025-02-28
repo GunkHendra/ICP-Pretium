@@ -1,4 +1,4 @@
-import Navbar from '@/components/navbar'
+import Layout from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -18,36 +18,31 @@ const teamMembers = [
     id: 1,
     name: "Gung Hendra",
     role: "Founder & CEO",
-    bio: "Gung is a serial entrepreneur with a passion for blockchain technology and its potential to change the world for the better.",
-    avatar: "../public/gunghen.png"
+    avatar: "/gunghen.png"
   },
   {
     id: 2,
     name: "Rama",
     role: "CTO",
-    bio: "Rama is a seasoned engineer with a background in distributed systems and cryptography.",
-    avatar: "../public/rama.png"
+    avatar: "/rama.png"
   },
   {
     id: 3,
     name: "Dwiki",
     role: "Head of Operations",
-    bio: "Dwiki ensures that our platform runs smoothly and efficiently, connecting employers with top talent.",
-    avatar: "../public/dwiki.png"
+    avatar: "/dwiki.png"
   },
   {
     id: 4,
     name: "Wiprayanka",
     role: "Chief Marketing Officer",
-    bio: "Nyoman leads our marketing efforts to drive growth and awareness for Pretium.",
-    avatar: "../public/nyoman.png"
+    avatar: "/nyoman.png"
   },
   {
     id: 5,
     name: "Yoga",
     role: "Head of Design",
-    bio: "Dewa is responsible for creating a seamless and intuitive user experience for our platform.",
-    avatar: "../public/yoga.png"
+    avatar: "/yoga.png"
   }
 ];
 
@@ -74,7 +69,7 @@ const values = [
   }
 ];
 
-function About() {
+export default function About() {
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
@@ -98,8 +93,7 @@ function About() {
   }, [isMobile]);
 
   return (
-    <div className='bg-background min-h-screen text-foreground font-geist'>
-      <Navbar />
+    <Layout>
       <main className="container mx-auto px-10 pt-10 pb-25">
         <section
           className="min-h-[80vh] flex flex-col justify-center items-center"
@@ -107,7 +101,7 @@ function About() {
           data-aos-delay="300"
           data-aos-anchor-placement="top-bottom"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">About Pretium</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">About PRETIUM</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-muted-foreground mb-8">
             We're building the future of work on the blockchain, connecting talent with opportunity in a transparent ecosystem.
           </p>
@@ -122,7 +116,7 @@ function About() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg mb-6">
-              Pretium exists to democratize opportunity by creating a transparent, secure, and efficient marketplace
+              PRETIUM exists to democratize opportunity by creating a transparent, secure, and efficient marketplace
               for jobs and talent in the blockchain ecosystem. We believe that by leveraging decentralized technology,
               we can create more fairness, reduce friction, and open doors for professionals worldwide.
             </p>
@@ -282,7 +276,7 @@ function About() {
           <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
           <div className="max-w-xl mx-auto">
             <p className="text-lg mb-8">
-              Have questions or want to learn more about Pretium? We'd love to hear from you!
+              Have questions or want to learn more about PRETIUM? We'd love to hear from you!
             </p>
             <div className="flex gap-6 justify-center mb-8">
               <div className="flex items-center gap-2">
@@ -302,8 +296,6 @@ function About() {
           </div>
         </section>
       </main>
-    </div>
+    </Layout>
   );
 }
-
-export default About;
