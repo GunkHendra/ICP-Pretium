@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
+import Navbar from '@/components/navbar';
 import 'aos/dist/aos.css';
 
 interface LayoutProps {
@@ -7,14 +6,12 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
-    useEffect(() => {
-        AOS.init({
-            duration: 200,
-            once: true,
-            easing: 'ease-in-out',
-            offset: 50,
-        });
-    }, []);
-
-    return <>{children}</>;
+    return (
+        <html lang="en">
+            <body className="bg-background min-h-screen text-foreground font-geist flex flex-col">
+                <Navbar />
+                {children}
+            </body>
+        </html>
+    );
 }

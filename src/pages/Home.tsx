@@ -1,4 +1,6 @@
-import Navbar from '@/components/navbar'
+import Layout from '@/components/layout';
+import { useEffect, useState } from 'react';
+import AOS from 'aos';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
@@ -6,15 +8,11 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
 import { Card, CardContent } from '@/components/ui/card';
-import { Lock, ShieldCheck, HandCoins } from "lucide-react";
-import { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { Lock, ShieldCheck } from "lucide-react";
 
 const featuredJobs = [
   {
@@ -73,32 +71,31 @@ function formatNumber(num: number): string {
   return num.toString();
 }
 
-function App() {
+export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
-
+    
   useEffect(() => {
-    const checkMobile = () => {
+  const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
-    };
+  };
 
-    checkMobile();
+  checkMobile();
 
-    window.addEventListener('resize', checkMobile);
+  window.addEventListener('resize', checkMobile);
 
-    return () => window.removeEventListener('resize', checkMobile);
+  return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   useEffect(() => {
-    AOS.init({
+  AOS.init({
       once: true,
       easing: 'ease-in-out',
       disable: isMobile,
-    });
+  });
   }, [isMobile]);
 
   return (
-    <div className='bg-background min-h-screen text-foreground font-geist flex flex-col'>
-      <Navbar />
+    <Layout>
       <main className="flex-1 flex items-center justify-center">
         <div className="container mx-auto px-10 pt-10 pb-25">
           <section
@@ -132,7 +129,7 @@ function App() {
               data-aos-delay="300"
               data-aos-anchor-placement="top-bottom"
             >
-              Why Pretium?
+              Why PRETIUM?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card data-aos="fade-up" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
@@ -173,16 +170,20 @@ function App() {
                 />
                 <Select>
                   <SelectTrigger className="md:w-1/4">
-                    <SelectValue placeholder="Select a fruit" />
+                    <SelectValue placeholder="Category" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectLabel>Fruits</SelectLabel>
-                      <SelectItem value="apple">Apple</SelectItem>
-                      <SelectItem value="banana">Banana</SelectItem>
-                      <SelectItem value="blueberry">Blueberry</SelectItem>
-                      <SelectItem value="grapes">Grapes</SelectItem>
-                      <SelectItem value="pineapple">Pineapple</SelectItem>
+                      <SelectItem value="blockchain-development">Blockchain Development</SelectItem>
+                      <SelectItem value="smart-contract">Smart Contract Development</SelectItem>
+                      <SelectItem value="frontend">Frontend Development</SelectItem>
+                      <SelectItem value="backend">Backend Development</SelectItem>
+                      <SelectItem value="security">Security & Auditing</SelectItem>
+                      <SelectItem value="design">UI/UX Design</SelectItem>
+                      <SelectItem value="product">Product Management</SelectItem>
+                      <SelectItem value="marketing">Marketing & Growth</SelectItem>
+                      <SelectItem value="research">Research & Analysis</SelectItem>
+                      <SelectItem value="other">Other</SelectItem>
                     </SelectGroup>
                   </SelectContent>
                 </Select>
@@ -205,7 +206,7 @@ function App() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {featuredJobs.map((job, index) => (
+              {featuredJobs.map((job) => (
                 <Card
                   key={job.id}
                   data-aos="fade-up"
@@ -269,8 +270,6 @@ function App() {
           </section>
         </div>
       </main>
-    </div>
+    </Layout>
   );
 }
-
-export default App;
