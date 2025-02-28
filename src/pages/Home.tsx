@@ -221,7 +221,7 @@ export default function Home() {
                           {job.company} • {job.location} • {job.type}
                         </div>
                       </div>
-                      <div className="bg-primary/10 text-primary font-medium px-3 py-1 rounded-full text-sm h-fit">
+                      <div className="bg-primary/20 text-primary font-medium px-3 py-1 rounded-full text-sm h-fit">
                         {job.payment}
                       </div>
                     </div>
