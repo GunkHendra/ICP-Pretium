@@ -76,7 +76,7 @@ const values = [
 
 export default function About() {
   const [isMobile, setIsMobile] = useState(false);
-  
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -107,7 +107,7 @@ export default function About() {
       >
         <h1 className="text-4xl md:text-6xl font-bold mb-6">About Pretium</h1>
         <p className="text-xl md:text-2xl max-w-3xl mx-auto text-muted-foreground mb-8">
-          We're building the future of work on the blockchain, connecting talent with opportunity in a transparent ecosystem.
+          We&apos;re building the future of work on the blockchain, connecting talent with opportunity in a transparent ecosystem.
         </p>
       </section>
 
@@ -179,7 +179,7 @@ export default function About() {
             data-aos-anchor-placement="top-bottom"
           >
             <Avatar className="w-60 h-80 xl:w-80 2xl:w-90 xl:h-120 mx-auto mb-4 brightness-[90%]">
-              <AvatarImage src={teamMembers[0].avatar} alt={teamMembers[0].name} className='object-cover'/>
+              <AvatarImage src={teamMembers[0].avatar} alt={teamMembers[0].name} className='object-cover' />
             </Avatar>
             <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[0].name}</h3>
             <div className="text-xs xl:text-sm text-primary font-medium mb-3">
@@ -193,7 +193,7 @@ export default function About() {
             data-aos-anchor-placement="top-bottom"
           >
             <Avatar className="w-60 h-80 xl:w-75 2xl:w-85 xl:h-120 mx-auto mb-4 brightness-[90%]">
-              <AvatarImage src={teamMembers[1].avatar} alt={teamMembers[1].name} className='object-cover'/>
+              <AvatarImage src={teamMembers[1].avatar} alt={teamMembers[1].name} className='object-cover' />
             </Avatar>
             <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[1].name}</h3>
             <div className="text-xs xl:text-sm text-primary font-medium mb-3">
@@ -207,7 +207,7 @@ export default function About() {
             data-aos-anchor-placement="center-bottom"
           >
             <Avatar className="w-60 h-80 xl:w-70 2xl:w-85 xl:h-120 mx-auto mb-4 brightness-[90%]">
-              <AvatarImage src={teamMembers[2].avatar} alt={teamMembers[2].name} className='object-cover'/>
+              <AvatarImage src={teamMembers[2].avatar} alt={teamMembers[2].name} className='object-cover' />
             </Avatar>
             <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[2].name}</h3>
             <div className="text-xs xl:text-sm text-primary font-medium mb-3">
@@ -221,7 +221,7 @@ export default function About() {
             data-aos-anchor-placement="top-bottom"
           >
             <Avatar className="w-60 h-80 xl:w-75 2xl:w-85 xl:h-120 mx-auto mb-4 brightness-[90%]">
-              <AvatarImage src={teamMembers[3].avatar} alt={teamMembers[3].name} className='object-cover'/>
+              <AvatarImage src={teamMembers[3].avatar} alt={teamMembers[3].name} className='object-cover' />
             </Avatar>
             <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[3].name}</h3>
             <div className="text-xs xl:text-sm text-primary font-medium mb-3">
@@ -229,13 +229,13 @@ export default function About() {
             </div>
           </div>
           <div
-          className="absolute right-0 px-6 pb-6 pt-2 text-center"
-          data-aos="fade-left"
-          data-aos-delay="900"
-          data-aos-anchor-placement="center-bottom"
+            className="absolute right-0 px-6 pb-6 pt-2 text-center"
+            data-aos="fade-left"
+            data-aos-delay="900"
+            data-aos-anchor-placement="center-bottom"
           >
             <Avatar className="w-50 h-80 xl:w-65 2xl:w-75 xl:h-120 mx-auto mb-4 brightness-[90%]">
-              <AvatarImage src={teamMembers[4].avatar} alt={teamMembers[4].name} className='object-cover'/>
+              <AvatarImage src={teamMembers[4].avatar} alt={teamMembers[4].name} className='object-cover' />
             </Avatar>
             <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[4].name}</h3>
             <div className="text-xs xl:text-sm text-primary font-medium mb-3">
@@ -259,7 +259,7 @@ export default function About() {
             <Card key={member.id} className={`overflow-hidden ${member.id === 1 ? 'md:col-span-2 lg:col-span-4' : ''}`} data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-bottom">
               <div className="px-6 pb-6 pt-2 text-center">
                 <Avatar className="w-48 sm:w-60 h-80 mx-auto mb-4 brightness-[90%]">
-                  <AvatarImage src={member.avatar} alt={member.name} className='object-cover'/>
+                  <AvatarImage src={member.avatar} alt={member.name} className='object-cover' />
                 </Avatar>
                 <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                 <div className="text-sm text-primary font-medium">
@@ -280,7 +280,7 @@ export default function About() {
         <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
         <div className="max-w-xl mx-auto">
           <p className="text-lg mb-8">
-            Have questions or want to learn more about Pretium? We'd love to hear from you!
+            Have questions or want to learn more about Pretium? We&apos;d love to hear from you!
           </p>
           <div className="flex gap-6 justify-center mb-8">
             <div className="flex items-center gap-2">

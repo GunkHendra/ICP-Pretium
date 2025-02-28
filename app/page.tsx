@@ -200,7 +200,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {featuredJobs.map((job, index) => (
+            {featuredJobs.map((job) => (
               <Card
                 key={job.id}
                 data-aos="fade-up"
