@@ -127,7 +127,7 @@ export default function Home() {
             data-aos-delay="300"
             data-aos-anchor-placement="top-bottom"
           >
-            Why Pretium?
+            Why PRETIUM?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card data-aos="fade-up" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
@@ -168,16 +168,20 @@ export default function Home() {
               />
               <Select>
                 <SelectTrigger className="md:w-1/4">
-                  <SelectValue placeholder="Select a fruit" />
+                  <SelectValue placeholder="Category" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Fruits</SelectLabel>
-                    <SelectItem value="apple">Apple</SelectItem>
-                    <SelectItem value="banana">Banana</SelectItem>
-                    <SelectItem value="blueberry">Blueberry</SelectItem>
-                    <SelectItem value="grapes">Grapes</SelectItem>
-                    <SelectItem value="pineapple">Pineapple</SelectItem>
+                    <SelectItem value="blockchain-development">Blockchain Development</SelectItem>
+                    <SelectItem value="smart-contract">Smart Contract Development</SelectItem>
+                    <SelectItem value="frontend">Frontend Development</SelectItem>
+                    <SelectItem value="backend">Backend Development</SelectItem>
+                    <SelectItem value="security">Security & Auditing</SelectItem>
+                    <SelectItem value="design">UI/UX Design</SelectItem>
+                    <SelectItem value="product">Product Management</SelectItem>
+                    <SelectItem value="marketing">Marketing & Growth</SelectItem>
+                    <SelectItem value="research">Research & Analysis</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -200,7 +204,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {featuredJobs.map((job, index) => (
+            {featuredJobs.map((job) => (
               <Card
                 key={job.id}
                 data-aos="fade-up"
