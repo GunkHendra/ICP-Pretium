@@ -170,10 +170,10 @@ export default function Home() {
                 <Input
                   type="text"
                   placeholder="Keywords or job title"
-                  className='md:w-3/4'
+                  className='md:w-4/6'
                 />
                 <Select>
-                  <SelectTrigger className="md:w-1/4">
+                  <SelectTrigger className="md:max-w-2/6">
                     <SelectValue placeholder="Category" />
                   </SelectTrigger>
                   <SelectContent>
