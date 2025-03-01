@@ -112,12 +112,16 @@ export default function Home() {
                 Discover secure, transparent, and decentralized job opportunities powered by blockchain technology
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button>
-                  Browse Jobs
-                </Button>
-                <Button variant="ghost" className='border'>
-                  Post a Job
-                </Button>
+                <div className="sm:w-30">
+                  <Button className="w-full">
+                    Browse Jobs
+                  </Button>
+                </div>
+                <div className="sm:w-30">
+                  <Button variant="outline" className="w-full">
+                    Post a Job
+                  </Button>
+                </div>
               </div>
             </div>
           </section>
