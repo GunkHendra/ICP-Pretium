@@ -212,9 +212,9 @@ export default function JobDetail() {
                   Your credentials will be verified using our decentralized identity verification process.
                 </p>
 
-                <div className="bg-accent/30 p-6 rounded-md mb-4 flex justify-between items-center">
-                  <p className="text-sm">
-                    <Calendar className="inline mr-2" />
+                <div className="bg-accent/30 p-6 rounded-md mb-4 flex flex-col md:flex-row gap-6 justify-between md:items-center">
+                  <p className="text-sm/7 md:text-sm">
+                    <Calendar className="inline mr-2 w-5 h-5 md:w-6 md:h-6" />
                     Application deadline: <strong>{jobDetail.applicationDeadline}</strong>
                   </p>
                   <Button className="w-full md:w-auto">Apply for this Position</Button>
