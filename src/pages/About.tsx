@@ -178,7 +178,7 @@ export default function About() {
                 <AvatarImage src={teamMembers[0].avatar} alt={teamMembers[0].name} className='object-cover'/>
               </Avatar>
               <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[0].name}</h3>
-              <div className="text-xs xl:text-sm text-primary font-medium mb-3">
+              <div className="text-xs xl:text-sm text-primary-bright font-medium mb-3">
                 {teamMembers[0].role}
               </div>
             </div>
@@ -192,7 +192,7 @@ export default function About() {
                 <AvatarImage src={teamMembers[1].avatar} alt={teamMembers[1].name} className='object-cover'/>
               </Avatar>
               <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[1].name}</h3>
-              <div className="text-xs xl:text-sm text-primary font-medium mb-3">
+              <div className="text-xs xl:text-sm text-primary-bright font-medium mb-3">
                 {teamMembers[1].role}
               </div>
             </div>
@@ -206,7 +206,7 @@ export default function About() {
                 <AvatarImage src={teamMembers[2].avatar} alt={teamMembers[2].name} className='object-cover'/>
               </Avatar>
               <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[2].name}</h3>
-              <div className="text-xs xl:text-sm text-primary font-medium mb-3">
+              <div className="text-xs xl:text-sm text-primary-bright font-medium mb-3">
                 {teamMembers[2].role}
               </div>
             </div>
@@ -220,7 +220,7 @@ export default function About() {
                 <AvatarImage src={teamMembers[3].avatar} alt={teamMembers[3].name} className='object-cover'/>
               </Avatar>
               <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[3].name}</h3>
-              <div className="text-xs xl:text-sm text-primary font-medium mb-3">
+              <div className="text-xs xl:text-sm text-primary-bright font-medium mb-3">
                 {teamMembers[3].role}
               </div>
             </div>
@@ -234,7 +234,7 @@ export default function About() {
                 <AvatarImage src={teamMembers[4].avatar} alt={teamMembers[4].name} className='object-cover'/>
               </Avatar>
               <h3 className="text-lg xl:text-xl font-semibold mb-1">{teamMembers[4].name}</h3>
-              <div className="text-xs xl:text-sm text-primary font-medium mb-3">
+              <div className="text-xs xl:text-sm text-primary-bright font-medium mb-3">
                 {teamMembers[4].role}
               </div>
             </div>

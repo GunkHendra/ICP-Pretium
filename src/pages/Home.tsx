@@ -206,7 +206,7 @@ export default function Home() {
               data-aos-anchor-placement="top-bottom"
             >
               <h2 className="text-3xl font-bold">Featured Opportunities</h2>
-              <a href='' className="text-primary hover:underline font-medium">View All</a>
+              <a href='' className="text-primary-bright hover:underline font-medium">View All</a>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -225,7 +225,7 @@ export default function Home() {
                           {job.company} • {job.location} • {job.type}
                         </div>
                       </div>
-                      <div className="bg-primary/20 text-primary font-medium px-3 py-1 rounded-full text-sm h-fit">
+                      <div className="bg-primary/20 text-primary-bright font-medium px-3 py-1 rounded-full text-sm h-fit">
                         {job.payment}
                       </div>
                     </div>
